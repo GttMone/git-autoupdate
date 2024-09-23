@@ -81,7 +81,7 @@ async function createLog(log: string, type: 'error' | 'log' = 'log', options: { 
     const timestamp = getTimestamp();
     const formattedLog = `${options.seperate ? '\n\n\n' : ''}[${timestamp}] ${log}\n`
 
-    if (options.consoleOutput) console[type](formattedLog);
+    if (options.consoleOutput || !logging.enabled) console[type](formattedLog);
     if (!logging.enabled) return;
 
     try {

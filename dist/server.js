@@ -79,7 +79,7 @@ function syncResourceChanges(resourcePath) {
 async function createLog(log, type = 'log', options = {}) {
     const timestamp = getTimestamp();
     const formattedLog = `${options.seperate ? '\n\n\n' : ''}[${timestamp}] ${log}\n`;
-    if (options.consoleOutput)
+    if (options.consoleOutput || !config_json_1.logging.enabled)
         console[type](formattedLog);
     if (!config_json_1.logging.enabled)
         return;
