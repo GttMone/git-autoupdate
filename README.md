@@ -1,6 +1,6 @@
 # Automatically sync GitHub organization repositories changes to local machine.
 
-## Installation
+# Installation
 1. Download [Node.JS LTS](https://nodejs.org/)
 2. Open a terminal and cd into your desired directory
 3. Download a zip archive of the code or clone it using:
@@ -8,20 +8,20 @@
 git clone https://github.com/GttMone/git-autoupdate .
 ```
 4. To install dependencies, run the following command in the same directory:
-```
+```bash
 npm i
 ```
 
-## Initial Configuration
-# WARNING: This script will remove all resources in the desired path and replace them with a fresh cloned version from GitHub.
+# Initial Configuration
+## WARNING: This script will remove all resources in the desired path and replace them with a fresh cloned version from GitHub.
 ### All changes will be lost, so please make a copy of anything you want to keep.
 
 1. Run:
-```
+```bash
 npm run init--confirm
 ```
 
-## Program Configuration
+# Program Configuration
 - Navigate to config.json
 - Modify to your liking, here are the options explained:
 ```json
@@ -55,4 +55,15 @@ npm run init--confirm
     },
     "pushEndpoint": "http://localhost:3000/push" // When all resources are updated, sends a POST request to this endpoint with no body.
 }
+```
+
+# Running the program
+### After you've done all the steps above, you can use the following command to run the program:
+```bash
+npm start
+```
+### And if you'd like to keep the program running in the background and automatically restart, I suggest you download [PM2 - Process Manager For Node.JS](https://pm2.keymetrics.io/)
+### After you've downloaded PM2, run in the same directory:
+```bash
+pm2 start dist/server.js --name git-autoupdate
 ```
