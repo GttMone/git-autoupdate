@@ -1,0 +1,30 @@
+{
+    "ignoredResources": [""],
+    "directoryPath": "",
+    "remoteOrgUrl": "https://github.com/Qbox-project",
+    "updateOnStart": true,
+    "schedule": {
+        "cronExpression": "0 * * * *",
+        "timezone": ""
+    },
+    "logging": {
+        "enabled": true,
+        "out": {
+            "file": "./out.log",
+            "webhook": {
+                "enabled": false,
+                "url": "",
+                "content": ""
+            }
+        },
+        "error": {
+            "file": "./error.log",
+            "webhook": {
+                "enabled": false,
+                "url": "",
+                "content": ""
+            }
+        }
+    },
+    "pushEndpoint": ""
+}

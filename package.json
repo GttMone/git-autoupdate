@@ -1,0 +1,24 @@
+{
+  "name": "git-autoupdate",
+  "version": "1.0.0",
+  "main": "dist/server.js",
+  "scripts": {
+    "start": "node dist/server.js",
+    "init": "node dist/init.js",
+    "init--confirm": "node dist/init.js --confirm",
+    "dev": "concurrently \"tsc --watch\" \"nodemon dist/server.js\""
+  },
+  "keywords": [],
+  "author": "Github.com/GttMone",
+  "license": "ISC",
+  "description": "Automatically update resources on a set interval.",
+  "dependencies": {
+    "@discordjs/builders": "^1.9.0",
+    "axios": "^1.7.7",
+    "node-cron": "^3.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.5",
+    "@types/node-cron": "^3.0.11"
+  }
+}
