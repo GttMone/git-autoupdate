@@ -14,6 +14,7 @@ npm i
 
 # Program Configuration
 - Navigate to config.json
+- All fields are required unless otherwise stated. You can leave optional fields an empty string ""
 - Modify to your liking, here are the options explained:
 ```json
 {
@@ -32,7 +33,7 @@ npm i
             "webhook": { // Send logs to a Discord webhook
                 "enabled": false,
                 "url": "", // Put the Discord webhook here https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks
-                "content": "" // Content, outside of the embed. You can put make it ping a user/role using: <@ROLE-OR-USER-ID>
+                "content": "" // Content, outside of the embed. You can make it ping a user/role using: <@ROLE-OR-USER-ID> or @everyone (optional)
             }
         },
         "error": { // Error logs
@@ -40,11 +41,11 @@ npm i
             "webhook": { // Send logs to a Discord webhook
                 "enabled": true,
                 "url": "https://discord.com/api/webhooks/...", // Put the Discord webhook here https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks
-                "content": "<@1010110011001010010>" // Content, outside of the embed. You can put make it ping a user/role using: <@ROLE-OR-USER-ID>
+                "content": "<@1010110011001010010>" // Content, outside of the embed. You can make it ping a user/role using: <@ROLE-OR-USER-ID> or @everyone (optional)
             }
         }
     },
-    "pushEndpoint": "http://localhost:3000/push" // When all resources are updated, sends a POST request to this endpoint with no body.
+    "pushEndpoint": "http://localhost:3000/push" // When all resources are updated, sends a POST request to this endpoint with no body. (optional)
 }
 ```
 
