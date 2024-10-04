@@ -12,15 +12,6 @@ git clone https://github.com/GttMone/git-autoupdate .
 npm i
 ```
 
-# Initial Configuration
-## WARNING: This script will remove all resources in the desired path and replace them with a fresh cloned version from GitHub.
-### All changes will be lost, so please make a copy of anything you want to keep.
-
-1. Run:
-```bash
-npm run init--confirm
-```
-
 # Program Configuration
 - Navigate to config.json
 - Modify to your liking, here are the options explained:
@@ -56,6 +47,16 @@ npm run init--confirm
     "pushEndpoint": "http://localhost:3000/push" // When all resources are updated, sends a POST request to this endpoint with no body.
 }
 ```
+
+# Initial setup
+## WARNING: This script will remove all resources in the configured path and replace them with a fresh cloned version from GitHub.
+### All changes will be lost, so please make a copy of anything you want to keep.
+
+1. Run:
+```bash
+npm run init--confirm
+```
+
 
 # Running the program
 ### After you've done all the steps above, you can use the following command to run the program:
