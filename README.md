@@ -1,5 +1,7 @@
 # Automatically sync GitHub organization repositories changes to local machine.
 
+# Todo: https://youtu.be/JESI498HSMA
+
 # Installation
 1. Download [Node.JS LTS](https://nodejs.org/)
 2. Open a terminal and cd into your desired directory
